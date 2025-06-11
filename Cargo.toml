@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = ["taffy-3d"]
+
+[workspace.dependencies]
+taffy = "0.8"
+

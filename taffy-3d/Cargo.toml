@@ -1,0 +1,7 @@
+[package]
+name = "taffy-3d"
+authors = ["Carlos Diaz-Padron <carlos@carlosdp.xyz>"]
+edition = "2024"
+
+[dependencies]
+taffy.workspace = true
