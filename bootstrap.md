@@ -85,6 +85,20 @@ Total ≈ **14–16 weeks** for a beta on crates.io.
 
 1. Build on top of Taffy and spike the `Size3`.
 
+## Task list
+
+The following checklist tracks the remaining work to reach feature parity with
+`react-three-flex` for the layout engine itself:
+
+- [ ] Generalise the solver to operate over `Size3` and `Point3` in all axes.
+- [ ] Port the Flexbox algorithm to support the new stack (depth) axis.
+- [ ] Implement depth-aware grid and block layout primitives.
+- [ ] Mirror the layout props exposed by `react-three-flex` (flex direction,
+      wrap, gap, alignment, etc.).
+- [ ] Provide adapters that map solved layouts to `Transform` structures in 3‑D
+      engines.
+- [ ] Benchmark and add caching to ensure performance parity with 2‑D Taffy.
+
 With this plan, the Rust ecosystem gets a first-class, high-performance **3-D layout engine** that feels as natural as `@react-three/flex`, but benefits from Taffy’s speed, compile-time safety, and Bevy’s data-oriented architecture.
 
 [1]: https://github.com/pmndrs/react-three-flex?utm_source=chatgpt.com "pmndrs/react-three-flex: Flexbox for react-three-fiber - GitHub"
