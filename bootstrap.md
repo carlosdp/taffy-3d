@@ -87,14 +87,14 @@ Total ≈ **14–16 weeks** for a beta on crates.io.
 
 ## Task list
 
-The following checklist tracks the remaining work to reach feature parity with
+- The following checklist tracks the remaining work to reach feature parity with
 `react-three-flex` for the layout engine itself:
 
-- [ ] Generalise the solver to operate over `Size3` and `Point3` in all axes.
-- [ ] Port the Flexbox algorithm to support the new stack (depth) axis.
-- [ ] Implement depth-aware grid and block layout primitives.
-- [ ] Mirror the layout props exposed by `react-three-flex` (flex direction,
-      wrap, gap, alignment, etc.).
+- [x] Generalise the solver to operate over `Size3` and `Point3` in all axes. *(added new geometry types and Node3D abstractions used throughout the algorithms)*
+- [x] Port the Flexbox algorithm to support the new stack (depth) axis. *(`compute_layout` handles Row, Column and Depth orientations)*
+- [x] Implement depth-aware grid and block layout primitives. *(provided `compute_block_layout` and `compute_grid_layout` helpers)*
+- [x] Mirror the layout props exposed by `react-three-flex` (flex direction,
+      wrap, gap, alignment, etc.). *(`Style3D` exposes these props and the solver applies them)*
 - [ ] Provide adapters that map solved layouts to `Transform` structures in 3‑D
       engines.
 - [ ] Benchmark and add caching to ensure performance parity with 2‑D Taffy.
